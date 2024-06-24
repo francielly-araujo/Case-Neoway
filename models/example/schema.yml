@@ -1,0 +1,154 @@
+version: 2
+
+seeds:
+  - name: df_empresas
+    description: "Seed data for df_empresas"
+    columns:
+      - name: cnpj
+        description: "CNPJ of the entity"
+        data_type: string
+      - name: dt_abertura
+        description: "Data de abertura"
+      - name: matriz_empresaMatriz
+        description: "Matriz da empresa"
+      - name: cd_cnae_principal
+        description: "Código CNAE principal"
+      - name: de_cnae_principal
+        description: "Descrição do CNAE principal"
+      - name: de_ramo_atividade
+        description: "Descrição do ramo de atividade"
+      - name: de_setor
+        description: "Descrição do setor"
+      - name: endereco_cep
+        description: "CEP do endereço"
+      - name: endereco_municipio
+        description: "Município do endereço"
+      - name: endereco_uf
+        description: "UF do endereço"
+      - name: endereco_regiao
+        description: "Região do endereço"
+      - name: endereco_mesorregiao
+        description: "Mesorregião do endereço"
+      - name: situacao_cadastral
+        description: "Situação cadastral"
+
+  - name: empresas_nivel_atividade
+    description: "Seed data for empresas_nivel_atividade"
+    columns:
+      - name: cnpj
+        description: "CNPJ of the entity"
+        data_type: string
+      - name: nivel_atividade
+        description: "Nível de atividade"
+
+  - name: empresas_porte
+    description: "Seed data for empresas_porte"
+    columns:
+      - name: cnpj
+        description: "CNPJ of the entity"
+        data_type: string
+      - name: empresa_porte
+        description: "Porte da empresa"
+
+  - name: empresas_saude_tributaria
+    description: "Seed data for empresas_saude_tributaria"
+    columns:
+      - name: cnpj
+        description: "CNPJ of the entity"
+        data_type: string
+      - name: saude_tributaria
+        description: "Saúde tributária"
+
+  - name: empresas_simples
+    description: "Seed data for empresas_simples"
+    columns:
+      - name: cnpj
+        description: "CNPJ of the entity"
+        data_type: string
+      - name: optante_simples
+        description: "Optante pelo Simples"
+      - name: optante_simei
+        description: "Optante pelo SIMEI"
+
+  - name: bq_results
+    description: "Seed data from JSON conversion"
+    columns:
+      - name: cnpj
+        description: "CNPJ of the entity"
+        data_type: string
+      - name: area
+        description: "Área do processo"
+      - name: grauProcesso
+        description: "Grau do processo"
+      - name: comarca
+        description: "Comarca do processo"
+      - name: julgamento
+        description: "Julgamento"
+      - name: dataDecisao
+        description: "Data da decisão"
+      - name: dataEncerramento
+        description: "Data de encerramento"
+      - name: uf
+        description: "UF do processo"
+      - name: tribunal
+        description: "Tribunal do processo"
+      - name: ultimoEstado
+        description: "Último estado"
+      - name: orgaoJulgador
+        description: "Órgão julgador"
+      - name: citacaoTipo
+        description: "Tipo de citação"
+      - name: unidadeOrigem
+        description: "Unidade de origem"
+      - name: juiz
+        description: "Juiz do processo"
+      - name: valorCausa
+        description: "Valor da causa"
+      - name: valorPredicaoCondenacao
+        description: "Valor de predição de condenação"
+
+column_types:
+  df_empresas:
+    cnpj: string
+    dt_abertura: timestamp
+    matriz_empresaMatriz: string
+    cd_cnae_principal: string
+    de_cnae_principal: string
+    de_ramo_atividade: string
+    de_setor: string
+    endereco_cep: string
+    endereco_municipio: string
+    endereco_uf: string
+    endereco_regiao: string
+    endereco_mesorregiao: string
+    situacao_cadastral: string
+  empresas_nivel_atividade:
+    cnpj: string
+    nivel_atividade: string
+  empresas_porte:
+    cnpj: string
+    empresa_porte: string
+  empresas_saude_tributaria:
+    cnpj: string
+    saude_tributaria: string
+  empresas_simples:
+    cnpj: string
+    optante_simples: string
+    optante_simei: string
+  bq_results:
+    cnpj: string
+    area: string
+    grauProcesso: string
+    comarca: string
+    julgamento: string
+    dataDecisao: timestamp
+    dataEncerramento: timestamp
+    uf: string
+    tribunal: string
+    ultimoEstado: string
+    orgaoJulgador: string
+    citacaoTipo: string
+    unidadeOrigem: string
+    juiz: string
+    valorCausa: float
+    valorPredicaoCondenacao: float
